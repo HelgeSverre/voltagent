@@ -21,6 +21,8 @@ import TabItem from '@theme/TabItem';
 
 :::tip Automatic Installation
 When you create a new project with `create-voltagent-app@latest`, you'll be asked which IDE you're using (Cursor, Windsurf, or VS Code). The MCP Docs Server will be automatically installed and configured for your chosen IDE. No additional setup is required.
+
+For Claude Code users, you can manually add the MCP server using `claude mcp add voltagent npx @voltagent/docs-mcp`.
 :::
 
 ```bash
@@ -150,7 +152,6 @@ If you prefer manual configuration, directly configure your IDE:
 **Option 2: With Claude Desktop**
 
 1. **Edit your Claude Desktop configuration file**:
-
    - **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
    - **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
 
@@ -172,6 +173,27 @@ If you created your project with `create-voltagent-app@latest`, the appropriate 
 :::
 
 3. **Restart Claude Desktop**
+
+  </TabItem>
+  <TabItem value="claude-code" label="Claude Code">
+
+For Claude Code (the terminal-based CLI), add the VoltAgent MCP docs server using:
+
+```bash
+claude mcp add voltagent npx @voltagent/docs-mcp
+```
+
+This will configure Claude Code to access VoltAgent documentation directly. After adding, you can ask questions like:
+
+```
+How do I create an agent in VoltAgent?
+```
+
+```
+Show me VoltAgent examples with Next.js
+```
+
+The MCP server will provide direct access to documentation, examples, and changelogs.
 
   </TabItem>
 </Tabs>
